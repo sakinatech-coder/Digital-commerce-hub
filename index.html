@@ -1,471 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Digital Commerce Hub | Learn Digital Marketing</title>
-
-    <meta name="description"
-          content="Learn digital marketing, explore career opportunities,
-          and practise essential marketing skills for B.Com students.">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Commerce Hub | Learn Digital Marketing</title>
+<meta name="description" content="Free digital marketing learning platform for B.Com students: lessons, marketing tools, career guide, glossary and a quiz with certificate.">
+<meta property="og:title" content="Digital Commerce Hub">
+<meta property="og:description" content="Learn digital marketing, use free tools, take the quiz and earn a certificate.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f9d8a'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white'>D</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#14213d;--mut:#55627a;--line:#dde3ee;--acc:#0f9d8a;--acc2:#f4a300;--accbg:#e3f6f3}
+[data-theme=dark]{--bg:#0e1626;--card:#16213a;--ink:#eef2fa;--mut:#a3b0c7;--line:#27365a;--acc:#35d0ba;--acc2:#ffc247;--accbg:#12304a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Sora','DM Sans',sans-serif;line-height:1.2}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:28px;max-width:60ch}
+nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.logo{font-family:Sora;font-weight:800;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--acc)}
+.links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--ink);padding:6px 10px;border-radius:8px;font-size:.92rem}
+.links a:hover{background:var(--accbg)}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--acc);color:#fff;border:0;padding:11px 20px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block}
+[data-theme=dark] .btn{color:#0e1626}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
+#theme{background:none;border:1px solid var(--line);border-radius:8px;padding:5px 10px;color:var(--ink)}
+@media(max-width:760px){#menu{display:block}.links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--card);flex-direction:column;align-items:stretch;padding:10px;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+#menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:5px 10px;color:var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2rem,5.5vw,3.2rem);margin-bottom:16px}
+.hero p{color:var(--mut);margin-bottom:24px;max-width:52ch}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.stats b{font-family:Sora;font-size:1.8rem;display:block}
+.stats small{color:var(--mut)}
+.funnel{display:flex;flex-direction:column;align-items:center;gap:8px}
+.funnel div{padding:14px 10px;text-align:center;color:#fff;font-weight:700;border-radius:10px;font-family:Sora;font-size:.95rem}
+.funnel small{display:block;font-family:'DM Sans';font-weight:400;opacity:.9}
+.f1{width:100%;background:#0b6e8a}.f2{width:82%;background:#0f9d8a}.f3{width:64%;background:#e08a00}.f4{width:46%;background:#c2410c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:1.1rem;margin:6px 0}
+.card p{color:var(--mut);font-size:.95rem}
+.ico{font-size:1.7rem}
+.prog{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:20px}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .4s}
+details{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:700;color:var(--acc)}
+details ul{margin:8px 0 8px 18px;color:var(--mut);font-size:.93rem}
+.done{margin-top:10px;background:var(--accbg);border:0;color:var(--ink);padding:7px 12px;border-radius:8px;font-weight:500}
+.done.on{background:var(--acc);color:#fff}
+[data-theme=dark] .done.on{color:#0e1626}
+label{display:block;font-weight:500;margin:10px 0 4px;font-size:.92rem}
+input,textarea,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.out{margin-top:10px;padding:10px;background:var(--accbg);border-radius:8px;word-break:break-all;font-size:.92rem;min-height:40px}
+.tag{display:inline-block;background:var(--accbg);padding:2px 9px;border-radius:20px;font-size:.8rem;margin:3px 3px 0 0}
+.gl dt{font-weight:700;margin-top:12px}.gl dd{color:var(--mut)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;max-width:680px}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-top:8px;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt.ok{background:#d7f5df;border-color:#1f9d4a;color:#0b3d1c}.opt.no{background:#fde0e0;border-color:#c53030;color:#5a1111}
+.exp{margin-top:12px;padding:10px;background:var(--accbg);border-radius:8px;font-size:.93rem}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:.9rem}
+#cert{display:none}
+@media print{body>*:not(#cert){display:none!important}#cert{display:block!important;border:8px double #0f9d8a;padding:60px 30px;text-align:center;margin:20px;color:#14213d;background:#fff}#cert h1{font-size:2.4rem;margin:20px 0}#cert h2{font-size:2rem;color:#0f9d8a;margin:14px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-
 <body>
-
-<header>
-    <nav class="navbar">
-        <a href="#home" class="logo">Digital<span>Commerce</span></a>
-
-        <button class="menu-toggle" id="menuToggle"
-                aria-label="Toggle navigation"
-                aria-expanded="false">
-            ☰
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#learn">Learn</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#contact" class="nav-button">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-    <!-- HOME SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="tagline">A Learning Platform for Commerce Students</p>
-
-            <h1>Build Your Future with <span>Digital Marketing</span></h1>
-
-            <p>
-                Learn digital marketing from the basics, develop practical
-                skills, explore career opportunities, and prepare for the
-                digital business world.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#learn" class="btn primary">Start Learning</a>
-                <a href="#careers" class="btn secondary">Explore Careers</a>
-            </div>
-
-            <div class="hero-stats">
-                <div>
-                    <h3>6+</h3>
-                    <p>Learning Topics</p>
-                </div>
-                <div>
-                    <h3>6</h3>
-                    <p>Career Paths</p>
-                </div>
-                <div>
-                    <h3>Free</h3>
-                    <p>Learning Resources</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-card">
-            <div class="illustration">📈</div>
-            <h2>Learn. Practise. Grow.</h2>
-            <p>Turn your commerce knowledge into digital skills.</p>
-
-            <div class="skill">
-                <span>SEO</span>
-                <div class="skill-bar"><span style="width: 85%"></span></div>
-            </div>
-
-            <div class="skill">
-                <span>Social Media</span>
-                <div class="skill-bar"><span style="width: 90%"></span></div>
-            </div>
-
-            <div class="skill">
-                <span>Content Marketing</span>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="section about" id="about">
-        <p class="section-label">ABOUT OUR PLATFORM</p>
-        <h2>Digital Skills for Commerce Students</h2>
-
-        <p class="section-description">
-            Digital Commerce Hub helps B.Com students understand how businesses
-            use online platforms to attract customers, promote products,
-            improve sales, and build brands.
-        </p>
-
-        <div class="feature-grid">
-            <article class="feature">
-                <div class="icon">📚</div>
-                <h3>Easy Learning</h3>
-                <p>Understand marketing concepts in simple language.</p>
-            </article>
-
-            <article class="feature">
-                <div class="icon">🎯</div>
-                <h3>Practical Skills</h3>
-                <p>Explore marketing activities and beginner projects.</p>
-            </article>
-
-            <article class="feature">
-                <div class="icon">💼</div>
-                <h3>Career Guidance</h3>
-                <p>Discover career options and prepare for interviews.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- LEARNING SECTION -->
-    <section class="section learning" id="learn">
-        <p class="section-label">EXPLORE THE SUBJECT</p>
-        <h2>Learn Digital Marketing</h2>
-
-        <p class="section-description">
-            Explore these essential digital marketing topics.
-        </p>
-
-        <div class="course-grid">
-
-            <article class="course-card">
-                <div class="course-icon">🔍</div>
-                <h3>Search Engine Optimization</h3>
-                <p>
-                    Learn how websites improve their visibility in search
-                    engine results through useful content and optimization.
-                </p>
-                <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
-                   target="_blank" rel="noopener noreferrer">
-                    Learn SEO ↗
-                </a>
-            </article>
-
-            <article class="course-card">
-                <div class="course-icon">📱</div>
-                <h3>Social Media Marketing</h3>
-                <p>
-                    Understand how businesses use social platforms to
-                    connect with customers and promote their brands.
-                </p>
-                <a href="https://www.facebook.com/business/learn"
-                   target="_blank" rel="noopener noreferrer">
-                    Explore Resources ↗
-                </a>
-            </article>
-
-            <article class="course-card">
-                <div class="course-icon">✍️</div>
-                <h3>Content Marketing</h3>
-                <p>
-                    Learn to create useful articles, posts, videos, and other
-                    content that attracts an audience.
-                </p>
-                <a href="https://academy.hubspot.com/"
-                   target="_blank" rel="noopener noreferrer">
-                    Explore Courses ↗
-                </a>
-            </article>
-
-            <article class="course-card">
-                <div class="course-icon">📧</div>
-                <h3>Email Marketing</h3>
-                <p>
-                    Discover how businesses use email newsletters and
-                    campaigns to communicate with customers.
-                </p>
-                <a href="https://academy.hubspot.com/"
-                   target="_blank" rel="noopener noreferrer">
-                    Learn More ↗
-                </a>
-            </article>
-
-            <article class="course-card">
-                <div class="course-icon">📊</div>
-                <h3>Google Ads & Analytics</h3>
-                <p>
-                    Understand online advertising, campaign performance,
-                    website traffic, and marketing measurement.
-                </p>
-                <a href="https://skillshop.withgoogle.com/"
-                   target="_blank" rel="noopener noreferrer">
-                    Visit Google Skillshop ↗
-                </a>
-            </article>
-
-            <article class="course-card">
-                <div class="course-icon">🛍️</div>
-                <h3>Affiliate Marketing</h3>
-                <p>
-                    Learn how affiliate partnerships work and how businesses
-                    reward qualifying referrals and sales.
-                </p>
-                <a href="https://affiliate-program.amazon.in/"
-                   target="_blank" rel="noopener noreferrer">
-                    Explore an Example ↗
-                </a>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- PROJECT SECTION -->
-    <section class="section projects" id="projects">
-        <p class="section-label">LEARN BY DOING</p>
-        <h2>Beginner-Friendly Projects</h2>
-
-        <div class="project-grid">
-            <article class="project-card">
-                <span>PROJECT 01</span>
-                <h3>Social Media Campaign</h3>
-                <p>
-                    Create a seven-day Instagram content calendar for a
-                    local clothing store.
-                </p>
-            </article>
-
-            <article class="project-card">
-                <span>PROJECT 02</span>
-                <h3>SEO Content Plan</h3>
-                <p>
-                    Choose keywords and prepare an outline for a blog about
-                    a product or service.
-                </p>
-            </article>
-
-            <article class="project-card">
-                <span>PROJECT 03</span>
-                <h3>Business Marketing Plan</h3>
-                <p>
-                    Prepare a budget and promotion strategy for a small
-                    business using your commerce knowledge.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <!-- CAREERS SECTION -->
-    <section class="section careers" id="careers">
-        <p class="section-label">PLAN YOUR FUTURE</p>
-        <h2>Career Opportunities After B.Com</h2>
-
-        <p class="section-description">
-            Build relevant skills and explore entry-level roles in digital
-            marketing and e-commerce.
-        </p>
-
-        <div class="career-grid">
-            <article class="career-card">
-                <span>🔎</span>
-                <h3>SEO Executive</h3>
-                <p>Help websites improve organic search visibility.</p>
-            </article>
-
-            <article class="career-card">
-                <span>📲</span>
-                <h3>Social Media Executive</h3>
-                <p>Plan content and manage social media accounts.</p>
-            </article>
-
-            <article class="career-card">
-                <span>📝</span>
-                <h3>Content Writer</h3>
-                <p>Create blogs, website copy, and marketing content.</p>
-            </article>
-
-            <article class="career-card">
-                <span>📢</span>
-                <h3>Digital Marketing Executive</h3>
-                <p>Assist with campaigns across digital channels.</p>
-            </article>
-
-            <article class="career-card">
-                <span>🛒</span>
-                <h3>E-commerce Executive</h3>
-                <p>Support online stores, product listings, and sales.</p>
-            </article>
-
-            <article class="career-card">
-                <span>📈</span>
-                <h3>Marketing Analyst</h3>
-                <p>Study campaign results and customer behaviour.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- QUIZ SECTION -->
-    <section class="section quiz-section" id="quiz">
-        <p class="section-label">TEST YOUR KNOWLEDGE</p>
-        <h2>Digital Marketing Quiz</h2>
-
-        <p class="section-description">
-            Answer these five questions and check your score.
-        </p>
-
-        <div class="quiz-box">
-            <form id="quizForm">
-
-                <fieldset class="question">
-                    <legend>1. What does SEO stand for?</legend>
-
-                    <label>
-                        <input type="radio" name="q1" value="a" required>
-                        Search Engine Optimization
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q1" value="b">
-                        Social Email Operation
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q1" value="c">
-                        Search Email Online
-                    </label>
-                </fieldset>
-
-                <fieldset class="question">
-                    <legend>2. Which is a social media platform?</legend>
-
-                    <label>
-                        <input type="radio" name="q2" value="a" required>
-                        Microsoft Excel
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q2" value="b">
-                        Instagram
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q2" value="c">
-                        Notepad
-                    </label>
-                </fieldset>
-
-                <fieldset class="question">
-                    <legend>3. What is the purpose of email marketing?</legend>
-
-                    <label>
-                        <input type="radio" name="q3" value="a" required>
-                        Repair computers
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q3" value="b">
-                        Design hardware
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q3" value="c">
-                        Communicate with customers
-                    </label>
-                </fieldset>
-
-                <fieldset class="question">
-                    <legend>4. What does PPC commonly mean in advertising?</legend>
-
-                    <label>
-                        <input type="radio" name="q4" value="a" required>
-                        Pay Per Click
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q4" value="b">
-                        Product Price Control
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q4" value="c">
-                        Personal Page Content
-                    </label>
-                </fieldset>
-
-                <fieldset class="question">
-                    <legend>5. Which tool can help measure website traffic?</legend>
-
-                    <label>
-                        <input type="radio" name="q5" value="a" required>
-                        Paint
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q5" value="b">
-                        Google Analytics
-                    </label>
-
-                    <label>
-                        <input type="radio" name="q5" value="c">
-                        Calculator
-                    </label>
-                </fieldset>
-
-                <button type="submit" class="btn primary">
-                    Submit Quiz
-                </button>
-            </form>
-
-            <div id="quizResult" class="quiz-result"
-                 role="status" aria-live="polite"></div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="section contact" id="contact">
-        <p class="section-label">GET IN TOUCH</p>
-        <h2>Contact Digital Commerce Hub</h2>
-
-        <p class="section-description">
-            Have a question or suggestion? Fill out the form below.
-        </p>
-
-        <form id="contactForm" class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name"
-                   placeholder="Enter your name" required>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email"
-                   placeholder="Enter your email" required>
-
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5"
-                      placeholder="Write your message..." required></textarea>
-
-            <button type="submit" class="btn primary">
-                Prepare Email
-            </button>
-
-            <p class="form-note">
-                This demo opens your email application. It does not store
-                or automatically send your information.
-            </p>
-        </form>
-    </section>
-
-</main>
-
-<footer>
-    <a href="#home" class="logo">Digital<span>Commerce</span></a>
-
-    <p>
-        Learn digital marketing. Build practical skills. Explore your future.
-    </p>
-
-    <p class="copyright">
-        &copy; <span id="year"></span> Digital Commerce Hub.
-        Created for B.Com students.
-    </p>
-</footer>
-
-<script src="script.js"></script>
+<nav><div class="wrap">
+<a class="logo" href="#home">Digital<span>Commerce</span>Hub</a>
+<div style="display:flex;gap:8px;align-items:center">
+<div class="links" id="links"><a href="#learn">Learn</a><a href="#practice">Play</a><a href="#careers">Careers</a><a href="#glossary">Glossary</a><a href="#quiz">Quiz</a><a href="#contact">Contact</a></div>
+<button id="theme" aria-label="Toggle dark mode">🌙</button><button id="menu" aria-label="Menu">☰</button>
+</div></div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+<div>
+<h1>Turn your B.Com degree into digital marketing skills</h1>
+<p>Short lessons, easy games to practise with, a career guide and simple games and a quiz that ends with a certificate. Built for commerce students.</p>
+<div class="cta"><a class="btn" href="#learn">Start learning</a><a class="btn o" href="#quiz">Take the quiz</a></div>
+<div class="stats"><div><b data-n="6">0</b><small>Topics</small></div><div><b data-n="3">0</b><small>Games</small></div><div><b data-n="10">0</b><small>Quiz questions</small></div></div>
+</div>
+<div class="funnel" aria-label="Marketing funnel">
+<div class="f1">Awareness<small>People find your brand</small></div>
+<div class="f2">Interest<small>They read and compare</small></div>
+<div class="f3">Decision<small>They choose you</small></div>
+<div class="f4">Action<small>They buy</small></div>
+</div>
+</div></header>
+
+<section id="learn"><div class="wrap">
+<h2>Learn digital marketing</h2>
+<p class="sub">Open a topic, read the basics, then mark it complete to track your progress.</p>
+<div class="prog"><b id="ptxt">0 of 6 topics completed</b><div class="bar"><i id="pbar"></i></div></div>
+<div class="grid" id="topics"></div>
+</div></section>
+
+<section id="practice" style="background:var(--card)"><div class="wrap">
+<h2>Learn by playing</h2>
+<p class="sub">No typing needed. Just tap and learn.</p>
+<div class="grid">
+<div class="card"><span class="ico">🃏</span><h3>Flashcards</h3><p>Tap to reveal the meaning of a marketing term.</p>
+<div class="out" id="fc" style="font-size:1.05rem"></div>
+<p style="margin-top:10px"><button class="btn" id="fcShow">Show meaning</button> <button class="btn o" id="fcNext">Next card</button></p></div>
+<div class="card"><span class="ico">🤔</span><h3>Myth or fact?</h3><p>Is the statement true?</p>
+<div class="out" id="mf" style="font-size:1.05rem"></div>
+<p style="margin-top:10px"><button class="btn" data-mf="1">Fact</button> <button class="btn o" data-mf="0">Myth</button> <button class="btn o" id="mfNext">Next</button></p>
+<div id="mfFb"></div></div>
+<div class="card"><span class="ico">🎯</span><h3>Pick the best idea</h3><p>Choose the best marketing move for each business.</p>
+<div class="out" id="sc" style="font-size:1.05rem"></div>
+<div id="scOpts"></div><div id="scFb"></div>
+<p style="margin-top:10px"><button class="btn o" id="scNext">Next business</button></p></div>
+</div></div></section>
+
+<section id="careers"><div class="wrap">
+<h2>Careers after B.Com</h2>
+<p class="sub">Entry-level roles you can aim for, with the skills and tools each one uses.</p>
+<div class="grid" id="careerGrid"></div>
+</div></section>
+
+<section id="glossary" style="background:var(--card)"><div class="wrap">
+<h2>Glossary</h2>
+<p class="sub">Search the terms you will hear in interviews.</p>
+<label for="gs">Search a term</label><input id="gs" placeholder="Try CTR or SEO" style="max-width:360px">
+<dl class="gl" id="gl"></dl>
+</div></section>
+
+<section id="quiz"><div class="wrap">
+<h2>Digital marketing quiz</h2>
+<p class="sub">10 questions. Score 7 or more to get your certificate.</p>
+<div class="q" id="qbox"></div>
+</div></section>
+
+<section id="contact" style="background:var(--card)"><div class="wrap">
+<h2>Contact</h2>
+<p class="sub">This is a demo form made for students.</p>
+<div class="card" style="max-width:520px">
+<label for="n1">Your name</label><input id="n1">
+<label for="n2">Your message</label><textarea id="n2" rows="4"></textarea>
+<p style="margin:12px 0"><button class="btn" id="send">Send message</button></p>
+<p class="sub" id="cmsg" style="margin:0;font-size:.9rem">Demo only: nothing is sent or stored.</p>
+</div></div></section>
+
+<footer><div class="wrap">© Digital Commerce Hub. Made by Sakina SK for B.Com students.</div></footer>
+
+<div id="cert"><p>Digital Commerce Hub</p><h1>Certificate of Completion</h1><p>This certifies that</p><h2 id="cname"></h2><p>scored <b id="cscore"></b> in the Digital Marketing Quiz.</p><p id="cdate" style="margin-top:30px"></p></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+/* theme + menu */
+const root=document.documentElement;
+function setTheme(t){root.dataset.theme=t;$('theme').textContent=t==='dark'?'☀️':'🌙';store.set('theme',t)}
+setTheme(store.get('theme',matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+$('theme').onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+$('menu').onclick=()=>$('links').classList.toggle('open');
+$('links').onclick=()=>$('links').classList.remove('open');
+/* counters */
+document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;let i=0;const t=setInterval(()=>{i++;el.textContent=i;if(i>=n)clearInterval(t)},120)});
+/* topics */
+const topics=[
+['🔍','Search Engine Optimization (SEO)','Getting your website to appear higher on Google without paying for ads.',['Keywords are the words people type into search.','On-page SEO: good titles, headings and useful content.','Off-page SEO: other trusted websites linking to you (backlinks).','Example: a bakery page that answers "birthday cakes near me".'],'https://developers.google.com/search/docs/fundamentals/seo-starter-guide'],
+['📱','Social Media Marketing','Using platforms like Instagram and Facebook to reach and talk to customers.',['Pick the platform where your customers already spend time.','Post a mix of useful, fun and promotional content.','Reply to comments: engagement builds trust.','Example: a 7-day reels plan for a clothing store.'],'https://www.facebook.com/business/learn'],
+['✍️','Content Marketing','Creating blogs, videos and posts that help people, so they trust your brand.',['Start with your audience\'s questions.','Use a content calendar to stay regular.','Reuse one idea as a blog, a reel and an email.','Example: a "how to choose running shoes" guide from a shoe shop.'],'https://academy.hubspot.com/'],
+['📧','Email Marketing','Sending newsletters and offers to people who gave you their email.',['Build a list with permission only.','A clear subject line decides if the email gets opened.','Measure open rate and click rate.','Example: a welcome email with a 10% first-order code.'],'https://academy.hubspot.com/'],
+['📊','Google Ads and Analytics','Paid ads on Google, and tools to measure traffic and results.',['PPC means you pay only when someone clicks.','Analytics shows visitors, pages and sources.','Test two ad versions (A/B test) and keep the better one.','Example: comparing the cost per click of two ad headlines.'],'https://skillshop.withgoogle.com/'],
+['🛍️','Affiliate Marketing','Earning a commission when your referral link leads to a sale.',['You recommend a product with a tracked link.','The business pays only for qualifying sales.','Be honest: tell your audience it is an affiliate link.','Example: a review blog that links to products.'],'https://affiliate-program.amazon.in/']];
+let doneT=store.get('done',[]);
+function renderTopics(){
+ $('topics').innerHTML=topics.map((t,i)=>`<div class="card"><span class="ico">${t[0]}</span><h3>${t[1]}</h3><p>${t[2]}</p><details><summary>Read the basics</summary><ul>${t[3].map(x=>`<li>${x}</li>`).join('')}</ul><a href="${t[4]}" target="_blank" rel="noopener">Free resource (opens new tab)</a></details><button class="done ${doneT.includes(i)?'on':''}" data-i="${i}">${doneT.includes(i)?'✓ Completed':'Mark as complete'}</button></div>`).join('');
+ $('ptxt').textContent=`${doneT.length} of ${topics.length} topics completed`;
+ $('pbar').style.width=(doneT.length/topics.length*100)+'%';
+}
+$('topics').onclick=e=>{const b=e.target.closest('.done');if(!b)return;const i=+b.dataset.i;doneT=doneT.includes(i)?doneT.filter(x=>x!==i):[...doneT,i];store.set('done',doneT);renderTopics()};
+renderTopics();
+/* careers */
+const careers=[['🔎','SEO Executive','Improves organic search visibility.',['Keyword research','Google Search Console','Content basics']],['📲','Social Media Executive','Plans content and manages accounts.',['Canva','Meta Business Suite','Copywriting']],['📝','Content Writer','Writes blogs, website copy and posts.',['Writing','SEO basics','Editing']],['📢','Digital Marketing Executive','Supports campaigns across channels.',['Google Ads','Email tools','Reporting']],['🛒','E-commerce Executive','Handles product listings and online sales.',['Product listings','Marketplace tools','Order tracking']],['📈','Marketing Analyst','Studies campaign results and customer behaviour.',['Excel','Google Analytics','Data storytelling']]];
+$('careerGrid').innerHTML=careers.map(c=>`<div class="card"><span class="ico">${c[0]}</span><h3>${c[1]}</h3><p>${c[2]}</p><div>${c[3].map(s=>`<span class="tag">${s}</span>`).join('')}</div></div>`).join('');
+/* glossary */
+const gl=[['SEO','Search Engine Optimization: improving visibility in search results.'],['PPC','Pay Per Click: you pay when someone clicks your ad.'],['CTR','Click Through Rate: clicks divided by impressions.'],['CPC','Cost Per Click: the price paid for one click.'],['ROI','Return on Investment: profit compared with what you spent.'],['Conversion','When a visitor does the action you want, like buying.'],['Backlink','A link to your site from another website.'],['Impression','One time your ad or post is shown.'],['Engagement','Likes, comments, shares and other interactions.'],['Funnel','The steps a customer takes from first seeing you to buying.']];
+function rg(){const q=$('gs').value.toLowerCase();const r=gl.filter(g=>(g[0]+g[1]).toLowerCase().includes(q));$('gl').innerHTML=r.length?r.map(g=>`<dt>${g[0]}</dt><dd>${g[1]}</dd>`).join(''):'<dd>No match. Try another word.</dd>'}
+$('gs').oninput=rg;rg();
+/* games */
+let fi=0;
+function fc(){$('fc').innerHTML='<b>'+gl[fi][0]+'</b>';$('fcShow').textContent='Show meaning'}
+$('fcShow').onclick=()=>{$('fc').innerHTML='<b>'+gl[fi][0]+'</b><br>'+gl[fi][1]};
+$('fcNext').onclick=()=>{fi=(fi+1)%gl.length;fc()};fc();
+const myths=[['You must pay Google to appear in search results.',0,'SEO helps you appear in results without paying. Ads are optional.'],['Email marketing should only go to people who agreed to receive it.',1,'Permission builds trust and avoids spam.'],['More followers always means more sales.',0,'Engaged followers matter more than a big number.'],['Affiliate links should be shared honestly with your audience.',1,'Telling people it is an affiliate link builds trust.'],['Analytics can show which pages your visitors like.',1,'Google Analytics shows page views and traffic sources.'],['Posting every day is better than posting useful content.',0,'Useful content matters more than posting just to post.']];
+let mi=0;
+function mf(){$('mf').textContent=myths[mi][0];$('mfFb').innerHTML=''}
+document.querySelectorAll('[data-mf]').forEach(b=>b.onclick=()=>{const m=myths[mi];$('mfFb').innerHTML='<div class="exp">'+(+b.dataset.mf===m[1]?'Correct. ':'Not quite. ')+m[2]+'</div>'});
+$('mfNext').onclick=()=>{mi=(mi+1)%myths.length;mf()};mf();
+const scn=[['A local tea shop wants more customers nearby.',['Instagram posts and reels with photos','Affiliate links on a blog','Only sending emails to strangers'],0,'Photos of fresh tea on social media reach nearby people quickly.'],['A student wants people to find her blog on Google.',['Use clear keywords and helpful titles (SEO)','Post nothing for a month','Buy random followers'],0,'SEO helps search engines understand and show the blog.'],['A shop wants to tell old customers about a sale.',['Send an email newsletter','Hide the sale','Change the shop name'],0,'Email reaches people who already know the shop.'],['A book blogger wants to earn from book recommendations.',['Affiliate marketing with honest reviews','Copy another blog','Delete all posts'],0,'Honest reviews with affiliate links can earn a commission.']];
+let si=0;
+function scs(){const q=scn[si];$('sc').textContent=q[0];$('scFb').innerHTML='';$('scOpts').innerHTML=q[1].map((o,i)=>'<button class="opt" data-s="'+i+'">'+o+'</button>').join('')}
+$('scOpts').onclick=e=>{const b=e.target.closest('.opt');if(!b)return;const q=scn[si],i=+b.dataset.s;$('scFb').innerHTML='<div class="exp">'+(i===q[2]?'Great choice. ':'Try another one. ')+q[3]+'</div>'};
+$('scNext').onclick=()=>{si=(si+1)%scn.length;scs()};scs();
+/* quiz */
+const Q=[['What does SEO stand for?',['Search Engine Optimization','Social Email Operation','Search Email Online'],0,'SEO means Search Engine Optimization: making your site easier to find on Google.'],
+['Which of these is a social media platform?',['Microsoft Excel','Instagram','Notepad'],1,'Instagram is a social platform. Excel and Notepad are software tools.'],
+['What is email marketing used for?',['Repairing computers','Designing hardware','Communicating with customers'],2,'Businesses use email to share offers and updates with customers who agreed to receive them.'],
+['What does PPC usually mean?',['Pay Per Click','Product Price Control','Personal Page Content'],0,'In PPC advertising you pay only when someone clicks your ad.'],
+['Which tool measures website traffic?',['Paint','Google Analytics','Calculator'],1,'Google Analytics shows visitors, pages viewed and traffic sources.'],
+['CTR is calculated as...',['Clicks ÷ Impressions × 100','Cost ÷ Revenue','Visitors + Sales'],0,'CTR = clicks divided by impressions, shown as a percentage.'],
+['What is a backlink?',['A broken page','A link to your site from another site','A paid email'],1,'Backlinks from trusted sites help search engines trust your pages.'],
+['Which is an example of content marketing?',['A helpful how-to blog post','A random pop-up','A password reset'],0,'Content marketing attracts people with useful content, not just ads.'],
+['What is an A/B test?',['Comparing two versions to see which works better','Checking spelling','Deleting old posts'],0,'You show version A and B to similar people and keep the better one.'],
+['In affiliate marketing, who pays the commission?',['The reader','The business selling the product','The search engine'],1,'The business pays the affiliate when a qualifying sale comes through their link.']];
+let qi=0,sc=0;
+function showQ(){const q=Q[qi];$('qbox').innerHTML=`<p style="color:var(--mut)">Question ${qi+1} of ${Q.length}</p><div class="bar"><i style="width:${qi/Q.length*100}%"></i></div><h3 style="margin:14px 0">${q[0]}</h3>${q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join('')}<div id="fb"></div>`}
+$('qbox').onclick=e=>{
+ const o=e.target.closest('.opt');
+ if(o&&!o.disabled){const q=Q[qi],i=+o.dataset.i;document.querySelectorAll('.opt').forEach(b=>{b.disabled=true;if(+b.dataset.i===q[2])b.classList.add('ok')});
+  if(i===q[2])sc++;else o.classList.add('no');
+  $('fb').innerHTML=`<div class="exp">${i===q[2]?'Correct. ':'Not quite. '}${q[3]}</div><p style="margin-top:12px"><button class="btn" id="next">${qi===Q.length-1?'See result':'Next question'}</button></p>`;return}
+ if(e.target.id==='next'){qi++;qi<Q.length?showQ():result();return}
+ if(e.target.id==='retry'){qi=0;sc=0;showQ();return}
+ if(e.target.id==='gen'){const n=$('cn').value.trim();if(!n){$('cn').focus();return}$('cname').textContent=n;$('cscore').textContent=sc+'/'+Q.length;$('cdate').textContent=new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});window.print()}};
+function result(){const pass=sc>=7;
+ const best=Math.max(sc,store.get('best',0));store.set('best',best);
+ $('qbox').innerHTML=`<h3>You scored ${sc} out of ${Q.length}</h3><p style="margin:10px 0;color:var(--mut)">${pass?'Great work! You passed. Enter your name to get your certificate.':'Review the Learn section and try again. You need 7 to pass.'} Best score: ${best}/${Q.length}.</p>${pass?'<label for="cn">Your name</label><input id="cn" style="max-width:320px"><p style="margin-top:12px"><button class="btn" id="gen">Print certificate</button> ':'<p>'}<button class="btn o" id="retry">Try again</button></p>`}
+showQ();
+/* contact */
+$('send').onclick=()=>{const n=$('n1').value.trim(),m=$('n2').value.trim();$('cmsg').textContent=(!n||!m)?'Please write your name and message first.':'Thank you, '+n+'! This is a demo, so your message was not sent.'};
+</script>
 </body>
-              </html>
+</html>
